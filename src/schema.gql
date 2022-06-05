@@ -29,6 +29,7 @@ type Class {
 
 type Query {
   teachers: [Teacher!]!
+  classes: [Class!]!
 }
 
 type Mutation {
