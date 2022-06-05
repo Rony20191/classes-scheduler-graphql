@@ -5,7 +5,7 @@ const config: Config.InitialOptions = {
   preset: 'ts-jest',
   bail: true,
   clearMocks: true,
-  collectCoverageFrom: ['<rootDir>/src/modules/**/useCases/**/*.ts'],
+  collectCoverageFrom: ['<rootDir>/src/modules/**/useCases/**/*.useCase.ts'],
   coverageDirectory: 'coverage',
   coverageReporters: ['text-summary', 'lcov'],
   rootDir: './',
@@ -13,6 +13,7 @@ const config: Config.InitialOptions = {
     {
       '~modules/*': ['src/modules/*'],
       '~providers/*': ['src/shared/infra/providers/*'],
+      '~shared/*': ['src/shared/*'],
     },
     {
       prefix: '<rootDir>/',
