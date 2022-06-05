@@ -1,0 +1,13 @@
+mutation {
+  createClass(
+   input: {
+     minimum_level_id: "6026b68a-40cc-44f6-b6fd-d8aa2e323aae",
+    teacher_id: "b83c4d3d-1b3e-464d-a3d2-6ce162c7ec49",
+    title: "Classe 1",
+    description: "Turma A",
+    link: "Link 1"
+  }
+  ){
+      id
+  }
+}

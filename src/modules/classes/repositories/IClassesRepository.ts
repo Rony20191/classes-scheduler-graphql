@@ -5,6 +5,7 @@ interface IClassesRepository {
   create(data: CreateClassDTO): Promise<Class>;
   existsById(id: string): Promise<boolean>;
   findByIds(ids: string[]): Promise<Class[]>;
+  findAll(): Promise<Class[]>;
 }
 
 export { IClassesRepository };

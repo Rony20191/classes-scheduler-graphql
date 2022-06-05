@@ -9,6 +9,7 @@ import { Class } from './infra/typeorm/entities/Class';
 import { ClassesRepository } from './infra/typeorm/repositories/ClassesRepository';
 import { CreateClassUseCase } from './useCases/createClass/CreateClass.useCase';
 import { FindClassesByIdsUseCase } from './useCases/FindClassesByIdsUseCase/FindClassesByIdsUseCase.useCase';
+import { FindAllClassesUseCase } from "~modules/classes/useCases/FindAllClassesUseCase/FindAllClassesUseCase";
 
 @Module({
   imports: [TypeOrmModule.forFeature([Class, Level])],
@@ -16,6 +17,7 @@ import { FindClassesByIdsUseCase } from './useCases/FindClassesByIdsUseCase/Find
     ClassesResolver,
     CreateClassUseCase,
     FindClassesByIdsUseCase,
+    FindAllClassesUseCase,
     {
       provide: 'ClassesRepository',
       inject: [ClassesRepository],

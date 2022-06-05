@@ -61,30 +61,30 @@ type LevelInterface {
 }
 
 type Query {
+  classes: [ClassInterface!]!
   teachers: [Teacher!]!
   levelById(id: String!): LevelInterface!
-    getAppointmentsByTeacherIdAndDate(
-      teacher_id: String!
+  getAppointmentsByTeacherIdAndDate(
+    teacher_id: String!
 
-      """format YYYY-MM-DD"""
-      date: String!
-      pagination: PaginationInput
-    ): AppointmentAndTotalInterface!
-    getAppointmentsByTeacherIdAndPeriod(
-      teacher_id: String!
+    """format YYYY-MM-DD"""
+    date: String!
+    pagination: PaginationInput
+  ): AppointmentAndTotalInterface!
+  getAppointmentsByTeacherIdAndPeriod(
+    teacher_id: String!
 
-      """format YYYY-MM-DD"""
-      initial_date: String!
+    """format YYYY-MM-DD"""
+    initial_date: String!
 
-      """format YYYY-MM-DD"""
-      final_date: String!
-    ): [AppointmentInterface!]!
-  }
+    """format YYYY-MM-DD"""
+    final_date: String!
+  ): [AppointmentInterface!]!
+}
 
-  input PaginationInput {
-    page: Float = 1
-    amount: Float = 10
-  classes: [Class!]!
+input PaginationInput {
+  page: Float = 1
+  amount: Float = 10
 }
 
 type Mutation {

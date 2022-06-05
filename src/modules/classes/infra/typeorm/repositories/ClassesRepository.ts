@@ -46,6 +46,11 @@ class ClassesRepository implements IClassesRepository {
 
     return classes;
   }
+  async findAll(): Promise<Class[]> {
+    const classes = await this.repository.find();
+
+    return classes;
+  }
 }
 
 export { ClassesRepository };

@@ -64,6 +64,10 @@ class ClassesRepositoryInMemory implements IClassesRepository {
 
     return classes;
   }
+
+  async findAll(): Promise<Class[]> {
+    return this.classes;
+  }
 }
 
 export { ClassesRepositoryInMemory };
